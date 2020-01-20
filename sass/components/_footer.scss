@@ -1,0 +1,98 @@
+.footer{
+    background-color: $color-gray-dark-3;
+    padding: 6.25rem 0;
+
+    @include respond(tab-port){
+        padding: 5rem 0;
+    }
+
+    &__logo-box{
+        
+    }
+
+    &__logo{
+        width: 9.38rem;
+        height: auto;
+        
+        @include respond(phone){
+            width: 6rem;
+            height: auto;
+        }
+    }
+
+    &__navigation{
+        @include respond(tab-port){
+           margin-bottom: 2rem;
+        }
+    }
+
+    &__list{
+        display: flex;
+        list-style: none;
+        
+    }
+
+    &__box-footer{
+        border-top: 1px solid $color-gray-dark;
+        padding-top: 1.25rem;
+        display: inline-block;
+        
+    }
+
+    &__item{
+       
+        &:not(:last-child){
+            margin-right: .94rem ;
+        }
+    }
+
+    &__link{
+
+       &:link,
+       &:visited{
+            color: $color-gray-light-1;
+            background-color: $color-gray-dark-3;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: all .2s;
+
+            @include respond(tab-port){
+                font-size: .79rem;
+                
+             }
+       }
+
+       &:hover,
+       &:active{
+           color: $color-primary;
+           box-shadow: 0 .625rem 1.25rem rgba($color-black, .4) ;
+           transform: rotate(5deg) scale(1.3);
+       }
+    }
+
+    &__copyright{
+        @include respond(tab-port){
+            display: flex;
+            
+         }
+    }
+
+    &__box-copyright{
+        border-top: .1px solid $color-gray-dark;
+        padding-top: 1.25rem;
+        display: inline-block;
+        width: 80%;
+        float: right;
+
+        @include respond(tab-port){
+            width: 100%;
+         }
+
+        & p {
+            color: $color-white;
+            font-size: .94rem;
+        }
+    }
+}
+

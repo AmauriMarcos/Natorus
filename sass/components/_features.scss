@@ -1,0 +1,34 @@
+.feature-box{
+    background-color: rgba($color-white, .8);
+    padding:  1.57rem;
+    text-align: center; 
+    border-radius: 3px;  
+    font-size: .94rem;
+    box-shadow: 0 .94rem 2.5rem rgba($color-black, .15);
+    transition: transform .3s;
+
+    &:not(:last-child){
+        @include respond(tab-port){
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__icon{
+        font-size: 3.75rem;
+        /* display: flex;
+        justify-content: center; */
+        margin-bottom: 5px;
+        display: inline-block;
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        -webkit-background-clip: text;
+        color: transparent; 
+    }
+
+    &:hover{
+        transform: translateY(-.95rem) scale(1.03);
+    }
+
+    &__text{
+
+    }
+}

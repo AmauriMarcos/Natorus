@@ -1,0 +1,214 @@
+.row{
+    max-width: 72.25rem;
+    margin: 0 auto;
+    display: grid;   
+    gap:  3.75rem;
+    grid-auto-rows: minmax(6.25rem, auto);
+    
+    @include respond(tab-port){
+        max-width: 25rem;
+    }
+}
+
+//GRID SECTION ABOUT
+.row-about{
+    grid-template-columns: repeat(2, 1fr);
+  
+}
+
+.box-content{ 
+    grid-column: 1/2; 
+    grid-row: 1/2;
+    
+    @include respond(tab-port){
+        grid-column: 1/3;
+        grid-row:1/2
+    }
+}
+
+.box-image { 
+    grid-column: 2/3; 
+    grid-row: 1/2;
+
+    @include respond(tab-port){
+        grid-column: 1/3;
+        grid-row:2/3;
+    }
+}
+
+//GRID SECTION FEATURES
+.row-features{
+    grid-template-columns: repeat(8, fr); 
+
+    @include respond(tab-port){
+        display: flex;
+        flex-direction: column;     
+    }
+}
+    
+
+.feature-box{
+
+    &--world{
+        grid-column: 1/3;
+        grid-row: 1/2;
+
+    }
+
+    &--nature{
+        grid-column:3/5;
+        grid-row: 1/2;
+               
+    }
+
+    &--way{
+        grid-column: 5/7;
+        grid-row: 1/2;
+               
+    }
+
+    &--life{
+        grid-column:7/9;
+        grid-row: 1/2;
+              
+    }
+}
+
+
+
+//GRID  SECTION TOURS
+.row-tours{
+    grid-template-columns: repeat(6, fr);
+    grid-auto-rows: minmax(31.1rem, auto);
+
+    @include respond(tab-port){
+        display: flex;
+        flex-direction: column;     
+    }
+}
+
+.card__grid{
+
+    &--yellow{
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+    &--green{
+        grid-column: 3/5;
+        grid-row: 1/2;
+    }
+
+    &--blue{
+        grid-column: 5/7;
+        grid-row: 1/2;
+    }
+}
+
+//GRID  SECTION STORIES
+
+.row-stories{
+    grid-template-columns: repeat(2, 100%);   
+
+    @include respond(tab-port){
+        max-width: 50rem;
+    }
+}
+
+.story__grid{
+
+    &--man{
+        grid-row: 2/3;
+    }
+}
+
+//GRID  SECTION BOOK
+
+.row-book{
+    grid-template-columns: 100%; 
+    
+    @include respond(tab-land){
+        padding: 0 2rem;
+    }
+
+    @include respond(tab-port){
+        padding: 0;
+    }
+}
+
+//GRID FOOTER
+
+.row-footer{
+    grid-template-columns: repeat(2, 1fr);
+    @include respond(tab-port){
+        display: flex;
+        flex-direction: column;     
+    }
+  
+}
+
+.footer__navigation-grid{ 
+    grid-column: 1/2; 
+    grid-row: 1/2;
+  
+}
+
+.footer__copyright-grid { 
+    grid-column: 2/3; 
+    grid-row: 1/2;
+
+}
+
+
+//GRID POPUP
+.popup{
+
+    &__row{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        @include respond(phone){
+            
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            margin: 1rem 3rem;
+            height: 90vh;
+        }
+        
+    }
+
+    &__grid-woman{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        
+        @include respond(phone){
+            grid-column: 1/5;
+            grid-row: 1/2
+            
+        }
+    }
+
+    &__grid-man{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        
+        @include respond(phone){
+            grid-column: 0;
+            grid-row: 0;
+        }
+    }
+
+    &__grid-content{
+        grid-column: 2/4;
+        grid-row: 1/3;
+        
+        @include respond(phone){
+            grid-column: 1/5;
+           grid-row: 2/5;
+            
+        }
+    }
+
+    
+}
